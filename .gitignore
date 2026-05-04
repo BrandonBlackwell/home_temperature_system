@@ -67,3 +67,9 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Local history for Visual Studio Code
+.history/
+.vscode/c_cpp_properties.json
+out/
+CMakePresets.json

@@ -1,0 +1,6 @@
+{
+    "configuration": "protocol_stack=none",
+    "board": "SiliconLabs:silabs:nano_matter",
+    "port": "COM3",
+    "sketch": "home_temperature_system.ino"
+}
