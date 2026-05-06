@@ -17,7 +17,8 @@ public:
   vin(vin), 
   temp25CtoK(temp25CtoK) 
   {}
-  ~TemperatureSensor();
+  
+  ~TemperatureSensor() = default;
 
   float getTemperatureCelsius(int sensorValue);
   float getTemperatureFahrenheit(int sensorValue);

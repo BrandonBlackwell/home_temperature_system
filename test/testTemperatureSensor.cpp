@@ -1,10 +1,12 @@
 #include "catch2/catch_test_macros.hpp"
+#include <catch2/matchers/catch_matchers_floating_point.hpp>
 
-uint32_t factorial(uint32_t number) {
-    return number <= 1 ? number : factorial(number - 1) * number;
-}
+#include "../src/temperatureSensor.hpp"
 
-TEST_CASE("factorial", "[math]") {
-    REQUIRE(factorial(1) == 1);
-    REQUIRE(factorial(5) == 120);
+TEST_CASE("TemperatureSensor", "[sensor]") {
+    TemperatureSensor sensor(3950, 10000, 5.0, 298.15);
+    REQUIRE_THAT(
+        sensor.getTemperatureCelsius(1023), 
+        Catch::Matchers::WithinAbs(25.0, 0.1)
+    );
 }

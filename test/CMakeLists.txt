@@ -2,7 +2,13 @@
 add_executable(unit_tests testTemperatureSensor.cpp)
 
 # Link against Catch2 and its default main()
-target_link_libraries(unit_tests PRIVATE Catch2::Catch2WithMain)
+# test/CMakeLists.txt
+target_link_libraries(
+    unit_tests 
+    PRIVATE 
+    temperature_sensor 
+    Catch2::Catch2WithMain
+)
 
 # Automatic test discovery for CTest
 include(Catch)

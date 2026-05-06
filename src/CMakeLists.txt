@@ -1,0 +1,3 @@
+add_library(temperature_sensor STATIC temperatureSensor.cpp)
+
+target_include_directories(temperature_sensor PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
