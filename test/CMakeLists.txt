@@ -1,8 +1,7 @@
 # Create the test executable
 add_executable(unit_tests testTemperatureSensor.cpp)
 
-# Link against Catch2 and its default main()
-# test/CMakeLists.txt
+# Link against the temperature_sensor library and Catch2
 target_link_libraries(
     unit_tests 
     PRIVATE 

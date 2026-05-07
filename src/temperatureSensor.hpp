@@ -1,14 +1,14 @@
 class TemperatureSensor
 {
 private:
-  const int betaValue;
-  const int resistorValue;
+  const float betaValue;
+  const float resistorValue;
   const float vin;
   const float temp25CtoK;
 public:
   TemperatureSensor(
-    const int betaValue, 
-    const int resistorValue, 
+    const float betaValue, 
+    const float resistorValue, 
     const float vin, 
     const float temp25CtoK
   ) : 
@@ -20,6 +20,10 @@ public:
   
   ~TemperatureSensor() = default;
 
-  float getTemperatureCelsius(int sensorValue);
-  float getTemperatureFahrenheit(int sensorValue);
+  float getTemperatureCelsius(float rawADC);
+  float getTemperatureFahrenheit(float rawADC);
+
+private:
+  float calculateTemperature(float rawADC);
+  float validateAnalogValue(float rawADC);
 };
