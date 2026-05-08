@@ -11,7 +11,7 @@ which is then converted to Celsius and Fahrenheit.
 
 const int BETA_VALUE = 3950;
 const int RESISTOR_10K = 10000; // 10k ohms
-const int Vin = 1023; // 3.3V represented in ADC units (10-bit ADC)
+const int Vin = 4095; // 3.3V represented in ADC units (12-bit ADC)
 const float TEMP_25C_to_K = 298.15; // 25C to K. Formula: 25 + 273.15K
  
 
@@ -21,8 +21,7 @@ void setup() {
 
 }
 
-void loop() {
-  delay(2000); 
+void loop() { 
   int sensorValue = analogRead(A0);
   TemperatureSensor tempSensor = TemperatureSensor(
     BETA_VALUE, 
@@ -39,4 +38,5 @@ void loop() {
   Serial.print(" °C, ");
   Serial.print(tempFahrenheit);
   Serial.println(" °F");
+  delay(2000); // Delay for 2 seconds before the next reading
 }

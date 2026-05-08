@@ -32,7 +32,8 @@ float TemperatureSensor::calculateTemperature(float rawADC) {
 }
 
 float TemperatureSensor::validateAnalogValue(float rawADC) {
-  if (rawADC < 1.0 || rawADC >= 1023.0) {
+  if (rawADC < 1.0 || rawADC >= 4095.0) {
+    std::cerr << "Invalid raw ADC value: " << rawADC << ". Must be between 1 and 4094." << std::endl;
     return NAN; // Avoid division by zero or negative resistance
   }
   return rawADC;
