@@ -1,0 +1,4 @@
+class RGBController {
+  RGBController::RGBController(){};
+
+};

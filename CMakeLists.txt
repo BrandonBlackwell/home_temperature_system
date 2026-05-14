@@ -16,6 +16,7 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "Generic")
     include(CTest)
     enable_testing()
 
-    add_subdirectory(src)
+    add_subdirectory(src/temperatureSensor)
+    add_subdirectory(src/rgbController)
     add_subdirectory(test)
 endif()

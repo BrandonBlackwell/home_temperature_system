@@ -1,3 +1,5 @@
-add_library(temperature_sensor STATIC temperatureSensor.cpp)
+add_library(temperature_sensor STATIC temperatureSensor/temperatureSensor.cpp)
+add_library(rgb_controller STATIC rgbController/rgbController.cpp)
 
 target_include_directories(temperature_sensor PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(rgb_controller PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

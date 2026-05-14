@@ -10,7 +10,7 @@ TODO:
  */
 #include <cmath>
 
-#include "src/temperatureSensor.hpp"
+#include "src/temperatureSensor/temperatureSensor.hpp"
 
 const int BETA_VALUE = 3950;
 const int RESISTOR_10K = 10000; // 10k ohms
@@ -117,7 +117,7 @@ void rgbTask(void *pvParameters) {
 
   for( ;; )
   {
-    /* Psudeo code showing a task waiting for an event
+    /* Pseudo code showing a task waiting for an event
         with a block time. If the event occurs, process it.
         If the timeout expires before the event occurs, then
         the system may be in an error state, so handle the
@@ -155,5 +155,6 @@ void rgbTask(void *pvParameters) {
     }
   } 
 }
+
 // void jsonTask(){}
 // void logTask(){}
