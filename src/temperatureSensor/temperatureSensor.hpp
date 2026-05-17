@@ -12,10 +12,10 @@ public:
     const float vin, 
     const float temp25CtoK
   ) : 
-  betaValue(betaValue), 
-  resistorValue(resistorValue), 
-  vin(vin), 
-  temp25CtoK(temp25CtoK) 
+    betaValue(betaValue), 
+    resistorValue(resistorValue), 
+    vin(vin), 
+    temp25CtoK(temp25CtoK) 
   {}
   
   ~TemperatureSensor() = default;
